@@ -1,0 +1,4 @@
+[submodule "djangoproject/templates"]
+	path = djangoproject/templates
+	url = https://github.com/cahyoadhi/test-konigle.git
+	ignore = dirty

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+/* ================ ROOT VARIABLE================ */
+
+body {
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+h1{
+    font-size: 1.7rem;
+}
+
+h2{
+    font-size:1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.text-muted{
+  color:var(--color-text-muted);
+}
+
+.Container{
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    height: 100vh;
+    overflow-y: hidden;
+    
+    transition: all 400ms ease;
+}
+.App{
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    background: var(--color-white);
+}
+
+.Navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    align-items: center;
+    padding: var(--padding-1);
+}
+
+
+/* ================ MainBar ================ */
+main{
+    padding: var(--padding-1);
+}
+
+main .insights, .tittle{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .insights > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300 ms ease;
+    text-align: center;
+}
+
+main .insights > div:hover{
+    box-shadow: none;   
+}
+
+.icon-wrapper{
+    margin: auto;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    overflow: hidden;
+    background: #363949; 
+}
+
+main .insights > div img{
+    
+    padding: 0.5rem;
+    width: 92%;
+    height: 92%;
+    color:var(--color-white);
+    object-fit: cover;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1.2rem;
+}
+
+
+/* ============= Recent Order ============= */
+main .email-list{
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .email-list h2{
+    margin-top: 0.8rem;
+}
+
+main .email-list table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+main .email-list table:hover{
+    box-shadow:none
+}
+
+main table tbody td, main table thead th{
+    padding-left: 2rem;
+    height: 2.8rem;
+    color: var(--color-dark);
+    border-top: 1px solid var(--color-light);
+    border-right: 1px solid var(--color-light);
+    text-align: start;
+}
+
+main table tbody td:last-child, main table thead th:last-child{
+    border-right: none
+}
+
+main table thead th {
+    border-top: none
+}
+
+.theme {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .toggle-theme {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toggle-theme input {
+    display: none;
+  }
+  
+  .theme .icon-wrapp{
+    height: 50px;
+    width:  50px;
+    overflow: hidden;
+}
+
+  .theme svg{
+    cursor: pointer;
+    fill: var(--color-dark);
+    scale: 75%;
+    height: 100%;
+    width:  100%;
+    object-fit: fill;
+}
+
+@media screen and (max-width: 912px){
+    .Container{
+        overflow-y: scroll;
+    }
+
+    main .insights, .tittle{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 667px){
+    .container .email-list table thead tr th:nth-child(3),
+    .container .email-list table tbody tr td:nth-child(3){
+        display: none;
+        }
+
+        .container table tbody td, 
+        .container table thead th{
+            padding-left: 1rem;
+            color: var(--color-dark);
+            border-top: 1px solid var(--color-light);
+            border-right: 1px solid var(--color-light);
+            text-align: start;
+            font-size: 0.7rem;
+        }
+}
+
+
+@media screen and (max-width: 414px){
+    .container .email-list table thead tr th:nth-child(2),
+    .container .email-list table tbody tr td:nth-child(2){
+        display: none;
+        }
+}

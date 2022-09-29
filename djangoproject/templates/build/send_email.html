@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        :root{
+        --card-padding:1.8rem;
+        --padding-1:1.2rem;
+        }
+
+</style>
+</head>
+
+<body style="font-family: poppins, sans-serif;  ">
+<main>
+<div className="container" 
+style="padding: var(--padding-1);
+width: 100%;">
+<h2 className="tittle" style="text-align: center;font-size: 2em;">Unity report</h2>
+<div className="insights" 
+style="
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+">
+        <div style="
+        margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        text-align: center;">
+                <h3 style="
+                margin: 1rem 0 0.6rem;
+                font-size: 1.2rem;">Email List</h3>
+                <h1 id="total-order">{{ email_list }}</h1>
+        </div>
+        <div style=" 
+        margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        text-align: center;">
+                <h3 style="
+                margin: 1rem 0 0.6rem;
+                font-size: 1.2rem;">New This Month</h3>
+                <h1 id="ongoing-order">{{ new_this_month }}</h1>
+        </div>            
+        <div style="
+        margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        text-align: center;">
+                <h3 style="
+                margin: 1rem 0 0.6rem;
+                font-size: 1.2rem;">Unsubscribed</h3>
+                <h1 id="complete-order">{{ unsubscribe }}</h1>
+        </div>
+</div>
+</div>  
+</main>
+
+</body>
+</html>
